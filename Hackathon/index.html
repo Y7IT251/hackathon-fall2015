@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApplication">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/angular-resource.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style type="text/css">
+.txt_source
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        background: #fff;
+        font-size: 12px;
+        font-family: arial;
+        border: 1px solid #ccc;
+        border-top: 0;
+    }
+    .txt_source li
+    {
+        padding:5px 11px;
+        display:none;
+    }
+    .txt_source li:hover
+    {
+        background-color:#f1f1f1;
+    }
+    .selected { background-color:#f1f1f1; }
+    </style>
+</head>
+<body>
+    <div class="col-md-12" style="text-align:center; background-color:aquamarine">
+        <h2>Stock Analysis System</h2>
+        
+    </div>
+    <div class="container col-md-12" ng-view>
+    </div>
+</body>
+</html>

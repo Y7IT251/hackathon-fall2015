@@ -1,0 +1,54 @@
+﻿<div class="col-md-10"></div>
+<div>
+    <label class="col-md-1" id="lbl_username">Narendra</label>
+    <a class="col-md-1" href="#/">Logout</a>
+</div>
+<form class="form-inline">
+    <div>
+        <h3 class="panel-heading">Please select the Sector to analyze the Results </h3>
+    </div>
+
+    <label for="inputStockName" class="sr-only">Sector Name</label>
+    <div>
+        <div class="col-md-6">
+            <select id="ddl_sectors">
+                <option value="">--Please Select--</option>
+                <option value="ESCD">Consumer Discretionary</option>
+                <option value="RESU">Consumer Staples</option>
+                <option value="EENR">Energy</option>
+                <option value="EFIN">Financials</option>
+                <option value="MEIS">Health Care</option>
+                <option value="MAGI">Industrials</option>
+                <option value="COSL">Information Technology</option>
+                <option value="CHES">Materials</option>
+                <option value="WINA">Telecommunication Services</option>
+                <option value="UTGD">Utilities</option>
+            </select>
+        </div>
+        <div class="col-md-6" style="text-align:center">
+            <a href="#/dashboard">Analyze Stocks</a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="col-md-12" id="div_secdata">
+        <div class="table-responsive table-bordered col-lg-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Stock Name</th>
+                        <th>Stock Code</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="stock in sectordetails">
+                    <tr class="success"><td>{{stock.Name}}</td><td>{{stock.Symbol}}</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <label id="lbl_sectorp"></label>
+            <br />
+            <img src="{{sectorimageurl}}" id="my_image" />
+        </div>
+    </div>
+</form>

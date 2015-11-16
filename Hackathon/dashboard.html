@@ -1,0 +1,61 @@
+﻿<div class="col-md-10"></div>
+<div id="div_logout">
+    <label class="col-md-1" id="lbl_username"></label>
+    <a class="col-md-1" href="#/">Logout</a>
+</div>
+<form class="form-dashboard">
+    <div>
+        <h3 class="panel-heading">Please start typing a name to Populate the Results </h3>
+    </div>
+    
+    <label for="inputStockName" class="sr-only">Stock Name</label>
+    <div>
+        <div class="col-md-6">
+            <input id="inputStockName" type="text" style="width:100%" />
+            <ul class="txt_source"></ul>
+        </div>
+        <div class="col-md-6" style="text-align:center">
+            <a href="#/sectors">Analyze Sectors</a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="col-md-12" id="div_data">
+        <div class="table-responsive table-bordered col-lg-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Properties</th>
+                        <th>Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="success"><td>PreviousClose</td><td>{{stockdetails.PreviousClose}}</td></tr>
+                    <tr class="danger"><td>Open</td><td>{{stockdetails.Open}}</td></tr>
+                    <tr class="success"><td>Bid</td><td>{{stockdetails.Bid}}</td></tr>
+                    <tr class="danger"><td>Ask</td><td>{{stockdetails.Ask}}</td></tr>
+                    <tr class="success"><td>OneyrTargetPrice</td><td>{{stockdetails.OneyrTargetPrice}}</td></tr>
+                    <tr class="danger"><td>DaysRange</td><td>{{stockdetails.DaysRange}}</td></tr>
+                    <tr class="success"><td>YearRange</td><td>{{stockdetails.YearRange}}</td></tr>
+                    <tr class="danger"><td>Volume</td><td>{{stockdetails.Volume}}</td></tr>
+                    <tr class="success"><td>AverageDailyVolume</td><td>{{stockdetails.AverageDailyVolume}}</td></tr>
+                    <tr class="danger"><td>MarketCapitalization</td><td>{{stockdetails.MarketCapitalization}}</td></tr>
+                    <tr class="success"><td>PERatio</td><td>{{stockdetails.PERatio}}</td></tr>
+                    <tr class="danger"><td>EarningsShare</td><td>{{stockdetails.EarningsShare}}</td></tr>
+                    <tr class="success"><td>DividendShare</td><td>{{stockdetails.DividendShare}}</td></tr>
+                    <tr class="danger"><td>DividendYield</td><td>{{stockdetails.DividendYield}}</td></tr>
+                    <tr class="success"><td>Change_PercentChange</td><td>{{stockdetails.Change_PercentChange}}</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <br />
+            <input type="text" ng-model="stockdays" />
+            <label>(eg 3d or 2m or 1y)</label>
+            <br />
+            <br />
+            <img src="{{imageurl}}" />
+        </div>
+    </div>
+    <label id="lbl_dashboarderror" style="color:red"></label>
+</form>
